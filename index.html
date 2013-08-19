@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="grid.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	</head>
+	<body>
+		<div style="position:relative;">
+			<div style="background-color:#AAA;position:absolute;top:50px;left:50px;width:100px;height:100px;"></div>
+			<div style="background-color:#AAA;position:absolute;top:200px;left:50px;width:100px;height:100px;"></div>
+			<div style="background-color:#AAA;position:absolute;top:50px;left:200px;width:100px;height:250px;"></div>
+			<div style="background-color:#AAA;position:absolute;top:350px;left:50px;width:250px;height:100px;"></div>
+		</div>
+		<script>
+			var grid = new Grid({
+					height:155,
+					width:155,
+					rows:10,
+					cols:10
+				});
+				
+			
+			grid.addBlock({row:1,col:1});
+			grid.addBlock({row:2,col:1});
+			grid.addBlock({row:1,col:2,rowspan:2});
+			grid.addBlock({row:3,col:1,colspan:2});
+			
+			grid.style();
+			
+			for(var index in grid._blocks){
+				console.log(grid._blocks[index].style);
+			}
+			
+		</script>
+	</body>
+</html>
