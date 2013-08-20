@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<style>
+			#grid{
+				margin:auto auto;
+				height:400px;
+				width:100%;
+				border: solid 1px #666;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="grid">
+			<div row="1" col="1" style="background-color:#AAA;"></div>
+			<div row="2" col="1" colSpan="2" style="background-color:#AAA;"></div>
+			<div row="1" col="3" rowSpan="2" style="background-color:#AAA;"></div>
+		</div>
+	
 		<script src='src\base.js'></script>
 		<script src='src\block.js'></script>
 		<script src='src\grid-metro.js'></script> 
+		<script src='src\grid-jQuery.js'></script> 
 		<!-- Unit Test Files -->
 		<script src='test\test.js'></script>
-		<script src='test\grid-metro-test.js'></script> 
-		<!-- <script src='test\base-test.js'></script> 
+		<!--<script src='test\grid-metro-test.js'></script> 
+		<script src='test\base-test.js'></script> 
 		<script src='test\block-test.js'></script>-->
-	</head>
-	<body>
 		<script>
+			$(document).ready(function(){
+				$('#grid').grid({
+					rows:2,
+					cols:3,
+					rowSp:3,
+					colSp:3,
+					unit:'%'
+				})
+			});
 		</script>
 	</body>
 </html>
