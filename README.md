@@ -69,6 +69,70 @@ Use block's new member to style you elment
 		+"left:"+b.left+b.unit+";"
 		+"width:"+b.width+b.unit+";"
 		+"height:"+b.height+b.unit+";";
-						
-Main Objects and Function
+
+Main Objects
 -----------
+grid
+
+	{
+			rows:1, //row count
+			cols:1, // colunm count
+			width:0, // grid width, use to caculate
+			height:0, // grid height, use to caculate
+			rowSp:0, // row space
+			colSp:0, // colunm space
+			unit:'px', // unit support 'px' and '%', default is 'px'
+			blocks:[] // store blocks in this grid.			
+	}
+
+block
+	
+	{
+			row:1, //row position
+			col:1, // colunm position
+			rowSpan:0, // row span, defualt 1
+			colSpan:0, // colunm span, defualt 1
+			//After call grid.layout()
+			top:0,
+			left:0,
+			width:0,
+			height:0,
+			unit:'px' or '%'
+	}
+						
+Function and Option
+-----------
+chaozhou.grid.metro(option)
+	
+	option{
+			rows:1, //row count
+			cols:1, // colunm count
+			width:0, // grid width, use to caculate
+			height:0, // grid height, use to caculate
+			rowSp:0, // row space
+			colSp:0, // colunm space
+			unit:'px', // unit support 'px' and '%', default is 'px'
+		}
+
+chaozhou.grid.block(option)
+
+	option{
+			row:1, //row position
+			col:1, // colunm position
+			rowSpan:0, // row span, defualt 1
+			colSpan:0, // colunm span, defualt 1
+		}
+jQuery.fn.grid(option,filter)
+	
+	option{
+			rows:1, //row count
+			cols:1, // colunm count
+			width:0, // grid width, can be igore
+			height:0, // grid height, can be igore
+			rowSp:0, // row space
+			colSp:0, // colunm space
+			unit:'px', // unit support 'px' and '%', default is 'px'
+			
+	}
+	
+	filter: childern to make as blocks. default is 'div'
