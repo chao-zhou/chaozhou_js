@@ -38,7 +38,7 @@
 		},
 		
 		define:function(path,instanceMembers,staticMembers){		
-			var obj = namespace(this,path);	
+			var obj = this.namespace(this,path);	
 			
 			this.copy(instanceMembers,obj,true);
 			
