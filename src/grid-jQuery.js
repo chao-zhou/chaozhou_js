@@ -5,9 +5,7 @@
 				width:this.width(),
 				height:this.height(),
 			},true);
-			
-			test.opt = _opt;
-			
+						
 			var root = this;
 			var grid = chaozhou.grid.metro(_opt);
 			
