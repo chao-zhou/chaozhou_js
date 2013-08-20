@@ -69,8 +69,8 @@
 						var block = this.blocks[i];
 						block.top = this.tops[block.row-1];
 						block.left = this.lefts[block.col-1];
-						block.height = this.rowSize()* block.rowSpan;
-						block.width = this.colSize()*block.colSpan;
+						block.height = this.rowSize()* block.rowSpan+this.rowSp*(block.rowSpan-1);
+						block.width = this.colSize()*block.colSpan+this.colSp*(block.colSpan-1);
 						block.unit = this.unit;
 					}	
 				};
