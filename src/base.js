@@ -35,7 +35,7 @@
 				obj = obj[name];
 			}
 			return obj;
-		};
+		},
 		
 		define:function(path,instanceMembers,staticMembers){		
 			var obj = namespace(this,path);	
