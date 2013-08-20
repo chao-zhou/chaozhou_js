@@ -8,20 +8,20 @@ chaozhou.js is personal javascript liberay to build grid on html page. chaozhou.
 
 How to use(with jQuery)
 -----------
-1. Include chaozhou.js and jQuery in your html page.
+Include chaozhou.js and jQuery in your html page.
 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script type="text/javascript" src="chaozhou-min.js"></script>
 
-2. Add "row","col","rowspan","colspan" on grid block
+Add "row","col","rowspan","colspan" on grid block
 
-	<div id="grid">
-			<div row="1" col="1" style="background-color:#AAA;"></div>
-			<div row="2" col="1" colSpan="2" style="background-color:#AAA;"></div>
-			<div row="1" col="3" rowSpan="2" style="background-color:#AAA;"></div>
-	</div>
+ 	<div id="grid">
+ 		<div row="1" col="1" style="background-color:#AAA;"></div>
+ 		<div row="2" col="1" colSpan="2" style="background-color:#AAA;"></div>
+ 		<div row="1" col="3" rowSpan="2" style="background-color:#AAA;"></div>
+ 	</div>
 
-3. Call grid(option,filter) method on Grid Element
+Call grid(option,filter) method on Grid Element
 
 	$('#grid').grid({
 			rows:2,
@@ -33,11 +33,11 @@ How to use(with jQuery)
 
 How to use(without jQuery)
 -----------
-1. Include chaozhou.js and jQuery in your html page.
+Include chaozhou.js and jQuery in your html page.
 
 	<script type="text/javascript" src="chaozhou-min.js"></script>
 
-2. Declare a grid variable
+Declare a grid variable
 
 	var grid = chaozhou.grid.metro({
 					rows:2,
@@ -49,7 +49,7 @@ How to use(without jQuery)
 					unit:'%'
 				})
 			
-3. Add block into grid
+Add block into grid
 
 	grid.blocks.push(chaozhou.grid.block({
 		row:1,
@@ -58,11 +58,11 @@ How to use(without jQuery)
 		colspan:1,
 	}));
 
-4. Call layout function on grid and all blocks in grid will attach new members(top, left, width, height,unit)
+Call layout function on grid and all blocks in grid will attach new members(top, left, width, height,unit)
 	
 	grid.layout();
 
-5. Use block's new member to style you elment
+Use block's new member to style you elment
 
 	var style = "position:absolute;"
 		+"top:"+b.top+b.unit+";"
