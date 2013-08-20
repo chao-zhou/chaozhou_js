@@ -75,7 +75,7 @@
 				colSpan:2,
 				top:150,
 				left:0,
-				width:200,
+				width:225,
 				height:100,
 				unit : 'px'
 			});
@@ -89,7 +89,7 @@
 				top:0,
 				left:250,
 				width:100,
-				height:200,
+				height:250,
 				unit : 'px'
 			});
 			
