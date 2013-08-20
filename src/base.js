@@ -1,20 +1,4 @@
-(function(){
-	var makeNamespaces = function(root,path){
-		var nps = path.split('/');
-		
-		var obj = root;
-		var name = '';
-		for(var i = 0;i< nps.length;i++){
-			name = nps[i]
-			if(name == '')
-				continue;
-			
-			obj[name] = obj[name]||{};
-			obj = obj[name];
-		}
-		return obj;
-	};
-
+(function () {
 	var chaozhou = {
 		isNullorUndefined:function(value){
 			return value == undefined || value == null;
@@ -37,8 +21,24 @@
 			return objB;
 		},
 		
+		namespace:function(root,path){
+			var nps = path.split('/');
+		
+			var obj = root;
+			var name = '';
+			for(var i = 0;i< nps.length;i++){
+				name = nps[i]
+				if(name == '')
+					continue;
+				
+				obj[name] = obj[name]||{};
+				obj = obj[name];
+			}
+			return obj;
+		};
+		
 		define:function(path,instanceMembers,staticMembers){		
-			var obj = makeNamespaces(this,path);	
+			var obj = namespace(this,path);	
 			
 			this.copy(instanceMembers,obj,true);
 			
