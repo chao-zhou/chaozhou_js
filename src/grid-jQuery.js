@@ -36,5 +36,7 @@
 						+subDiv.attr('style');
 				subDiv.attr('style',style);
 			}
+			
+			return this;
 		};
 })();
